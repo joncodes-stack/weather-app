@@ -1,18 +1,18 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { WheatherService } from '../../service/wheather.service';
-import { Wheather } from 'src/app/models/interfaces/wheather';
+import { WheatherService } from '../../service/weather.service';
+import { Wheather } from 'src/app/models/interfaces/weather';
 import { Subject, takeUntil } from 'rxjs';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-wheather-home',
-  templateUrl: './wheather-home.component.html',
+  selector: 'app-weather-home',
+  templateUrl: './weather-home.component.html',
   styleUrls: []
 })
 export class WheatherHomeComponent implements OnInit, OnDestroy {
   private readonly destroy$: Subject<void> = new Subject();
   initialCityName = 'Rio de Janeiro';
-  wheather!: Wheather;
+  weather!: Wheather;
   searchIcon = faMagnifyingGlass
 
   constructor(private wheatherService: WheatherService) { }
@@ -27,8 +27,8 @@ export class WheatherHomeComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.destroy$))
       .subscribe({
       next: (response) => {
-        response && (this.wheather = response)
-        console.log(this.wheather);
+        response && (this.weather = response)
+        console.log(this.weather);
       },
       error: (error) => console.log(error)
     })

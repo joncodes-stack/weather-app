@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { WheatherHomeComponent } from './modules/wheather/page/wheather-home/wheather-home.component';
+import { WheatherHomeComponent } from './modules/wheather/page/wheather-home/weather-home.component';
 
 const routes: Routes = [
   {

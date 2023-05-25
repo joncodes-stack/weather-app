@@ -5,7 +5,9 @@ import { HttpClientModule } from "@angular/common/http"
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WheatherModule } from './modules/wheather/page/wheather-home/Wheather.module';
+import { WeatherModule } from './modules/wheather/page/wheather-home/weather.module';
+
+
 
 @NgModule({
   declarations: [
@@ -16,7 +18,7 @@ import { WheatherModule } from './modules/wheather/page/wheather-home/Wheather.m
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    WheatherModule
+    WeatherModule
   ],
   providers: [],
   bootstrap: [AppComponent]

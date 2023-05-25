@@ -1,5 +1,5 @@
 <div class="search">
-  <form #form="ngForm" (submit)="onSubmit">
+  <form #form="ngForm" (submit)="onSubmit()">
     <input type="text"
            placeholder="Search Localization"
            name="city"
@@ -17,3 +17,5 @@
     </span>
   </form>
 </div>
+
+<app-weather-card  *ngIf="weather" [weather]="weather"></app-weather-card>

@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from "@angular/forms";
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { WheatherHomeComponent } from './wheather-home.component';
+import { WheatherHomeComponent } from './weather-home.component';
+import { WheatherCardComponent } from '../../components/wheather-card/weather-card.component';
+
 
 @NgModule({
-  declarations: [WheatherHomeComponent],
+  declarations: [WheatherHomeComponent,WheatherCardComponent],
   imports: [CommonModule, FontAwesomeModule, FormsModule]
 })
-export class WheatherModule {}
+export class WeatherModule {}
