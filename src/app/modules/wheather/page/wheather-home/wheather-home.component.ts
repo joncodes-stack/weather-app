@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WheatherService } from '../../service/wheather.service';
+import { Wheather } from 'src/app/models/interfaces/wheather';
 
 @Component({
   selector: 'app-wheather-home',
@@ -8,6 +9,7 @@ import { WheatherService } from '../../service/wheather.service';
 })
 export class WheatherHomeComponent implements OnInit {
   initialCityName = 'Rio de Janeiro';
+  wheather!: Wheather;
   constructor(private wheatherService: WheatherService) { }
 
   ngOnInit() {
@@ -16,8 +18,9 @@ export class WheatherHomeComponent implements OnInit {
 
   getWheatherDatas(cityName: string): void {
     this.wheatherService.getWheather(cityName).subscribe({
-      next: (reponse) => {
-        console.log(reponse);
+      next: (response) => {
+        response && (this.wheather = response)
+        console.log(this.wheather);
       },
       error: (error) => console.log(error)
     })
