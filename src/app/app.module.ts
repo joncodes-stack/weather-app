@@ -5,8 +5,7 @@ import { HttpClientModule } from "@angular/common/http"
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { WheatherModule } from './modules/wheather/page/wheather-home/Wheather.module';
 
 @NgModule({
   declarations: [
@@ -17,8 +16,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule,
-    FontAwesomeModule
+    WheatherModule
   ],
   providers: [],
   bootstrap: [AppComponent]

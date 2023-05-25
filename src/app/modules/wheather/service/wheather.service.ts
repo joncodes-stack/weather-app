@@ -10,7 +10,7 @@ export class WheatherService {
 constructor(private http: HttpClient) {}
 
 getWheather(cityName: string): Observable<any>{
-  return this.http.get(`http://api.openweathermap.org/data/2.5/weather?q=${cityName},br&APPID=${this.apiKey}`,{})
+  return this.http.get(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=${this.apiKey}`,{})
 }
 
 

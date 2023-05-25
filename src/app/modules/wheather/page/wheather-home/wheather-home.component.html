@@ -1,3 +1,19 @@
-<p>
-  wheather-home works!
-</p>
+<div class="search">
+  <form #form="ngForm" (submit)="onSubmit">
+    <input type="text"
+           placeholder="Search Localization"
+           name="city"
+           [(ngModel)]="initialCityName"
+      />
+    <span (click)="onSubmit()">
+      <fa-icon
+      animation="fade"
+      style="--fa-animation-duration:5s;
+      cursor:pointer"
+      size="lg"
+      class="search-icon"
+      [icon]="searchIcon">
+      </fa-icon>
+    </span>
+  </form>
+</div>
